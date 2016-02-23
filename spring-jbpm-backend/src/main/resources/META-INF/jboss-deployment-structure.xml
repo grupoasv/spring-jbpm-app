@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-deployment-structure>
+    <deployment>
+        <exclude-subsystems>
+            <subsystem name="webservices" />
+            <subsystem name="weld" />
+        </exclude-subsystems>
+    </deployment>
+    <!--<sub-deployment name="bpm-1.1.0.war">
+        <exclude-subsystems>
+            <subsystem name="webservices" />
+            <subsystem name="weld" />
+        </exclude-subsystems>
+    </sub-deployment>-->
+</jboss-deployment-structure>
