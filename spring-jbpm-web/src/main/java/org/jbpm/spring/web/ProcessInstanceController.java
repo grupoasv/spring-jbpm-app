@@ -9,6 +9,8 @@ import org.jbpm.services.api.model.VariableDesc;
 import org.kie.internal.query.QueryContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,6 +27,7 @@ public class ProcessInstanceController {
 	private ProcessService processService;
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@Transactional(propagation = Propagation.REQUIRED)
 	public String getProcessInstances(ModelMap model) {
 		
 		Collection<ProcessInstanceDesc> processInstances = runtimeDataService.getProcessInstances(new QueryContext(0, 100, "status", true));

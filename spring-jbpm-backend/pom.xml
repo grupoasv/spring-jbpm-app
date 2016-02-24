@@ -12,27 +12,27 @@
     <dependencies>
         <dependency>
             <groupId>org.kie</groupId>
-            <version>6.3.0.Final</version>
+            <version>${kie.version}</version>
             <artifactId>kie-api</artifactId>
         </dependency>
         <dependency>
             <groupId>org.kie</groupId>
-            <version>6.3.0.Final</version>
+            <version>${kie.version}</version>
             <artifactId>kie-internal</artifactId>
         </dependency>
         <dependency>
             <groupId>org.drools</groupId>
-            <version>6.3.0.Final</version>
+            <version>${drools.version}</version>
             <artifactId>drools-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.drools</groupId>
-            <version>6.3.0.Final</version>
+            <version>${drools.version}</version>
             <artifactId>drools-compiler</artifactId>
         </dependency>
         <dependency>
             <groupId>org.drools</groupId>
-            <version>6.3.0.Final</version>
+            <version>${drools.version}</version>
             <artifactId>drools-persistence-jpa</artifactId>
             <exclusions>
                 <exclusion>
@@ -43,68 +43,68 @@
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-flow</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-flow-builder</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-bpmn2</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-audit</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-persistence-jpa</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-human-task-core</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-human-task-jpa</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-human-task-workitems</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-human-task-audit</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-runtime-manager</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-services-api</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-kie-services</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbpm</groupId>
-            <version>6.3.0.Final</version>
             <artifactId>jbpm-workitems</artifactId>
+            <version>${jbpm.version}</version>
         </dependency>
 
         <dependency>
@@ -193,6 +193,10 @@
                     <groupId>dom4j</groupId>
                     <artifactId>dom4j</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>antlr</groupId>
+                    <artifactId>antlr</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -204,6 +208,11 @@
             <groupId>org.codehaus.btm</groupId>
             <artifactId>btm</artifactId>
             <version>2.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
         </dependency>
     </dependencies>
 </project>

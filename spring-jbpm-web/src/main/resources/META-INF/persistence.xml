@@ -6,7 +6,7 @@
 
   <persistence-unit name="org.jbpm.domain" transaction-type="JTA">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
-    <jta-data-source>java:jboss/datasources/bpmDS</jta-data-source>
+    <jta-data-source>java:jboss/datasources/bpmXADS</jta-data-source>
     <mapping-file>META-INF/Taskorm.xml</mapping-file>
     <mapping-file>META-INF/JBPMorm.xml</mapping-file>
     <mapping-file>META-INF/Servicesorm.xml</mapping-file>
@@ -68,18 +68,18 @@
       <property name="hibernate.listeners.envers.autoRegister" value="false"/>
       <property name="hibernate.id.new_generator_mappings" value="false" />
       <property name="hibernate.transaction.jta.platform" value="org.hibernate.service.jta.platform.internal.BitronixJtaPlatform"/>
-
-
-      <!--<property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider" />-->
       <property name="hibernate.show.sql" value="true" />
+      <property name="hibernate.format_sql" value="true" />
       <property name="hibernate.connection.autocommit" value="false" />
+      <property name="hibernate.transaction.factory_class" value="org.hibernate.engine.transaction.internal.jta.CMTTransactionFactory" />
+
 
 
       <!--<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.BTMTransactionManagerLookup"/>-->
-      <property name="hibernate.transaction.factory_class" value="org.hibernate.engine.transaction.internal.jta.JtaTransactionFactory"/>
+      <!--<property name="hibernate.transaction.factory_class" value="org.hibernate.engine.transaction.internal.jta.JtaTransactionFactory"/>-->
       <!--<property name="hibernate.transaction.factory_class" value="org.hibernate.transaction.JTATransactionFactory"/>-->
       <!--<property name="hibernate.transaction.factory_class" value="org.hibernate.engine.transaction.internal.jta.CMTTransactionFactory" />-->
-      <property name="hibernate.jndi.class" value="bitronix.tm.jndi.BitronixInitialContextFactory"/>
+      <!--<property name="hibernate.jndi.class" value="bitronix.tm.jndi.BitronixInitialContextFactory"/>-->
     </properties>
   </persistence-unit>
 

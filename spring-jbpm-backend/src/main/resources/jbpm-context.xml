@@ -115,7 +115,7 @@
         <entry key-ref="docClassificationProcess"><util:constant static-field="org.kie.api.io.ResourceType.BPMN2"/></entry>
       </map>
     </property>
-    <!--<property name="taskService" ref="taskService"/>-->
+    <property name="taskService" ref="taskService"/>
   </bean>
 
   <bean id="runtimeManager" class="org.kie.spring.factorybeans.RuntimeManagerFactoryBean" destroy-method="close">
