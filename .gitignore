@@ -31,3 +31,5 @@ bitronix-default-config.properties
 # files used for external db testing
 jdbc_driver.jar
 db-settings.xml
+wildfly-9.0.1.Final/standalone/log
+wildfly-9.0.1.Final/standalone/configuration/standalone_xml_history
