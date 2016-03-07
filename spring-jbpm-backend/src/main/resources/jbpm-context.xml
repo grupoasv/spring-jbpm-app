@@ -150,7 +150,7 @@
     <bean id="docClassificationProcess" factory-method="newClassPathResource"
           class="org.kie.internal.io.ResourceFactory">
         <constructor-arg>
-            <value>com/grupoasv/bpm/sample.bpmn2</value>
+            <value>com/grupoasv/bpm/hello.bpmn2</value>
         </constructor-arg>
     </bean>
 
